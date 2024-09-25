@@ -3,20 +3,14 @@
 int main(){
 int base;
 int power;
-int result;
-printf("enter a base");
+int result=1;
+printf("enter a base:  ");
 scanf("%d",&base);
-printf("enter exposant");
-scanf("%d",power);
+printf("enter exposant:  ");
+scanf("%d",&power);
 for (int i=1;i<=power;i++){
-    result=base*base;
+    result=result*base;
     }
-
 printf("%d",result);
-
-
-
-
 return 0;
 }
-
