@@ -11,6 +11,6 @@ scanf("%d",&power);
 for (int i=1;i<=power;i++){
     result=result*base;
     }
-printf("%d",result);
+printf("resule is : %d",result);
 return 0;
 }
