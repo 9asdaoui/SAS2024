@@ -2,15 +2,15 @@
 
 int main(){
 int num;
-int b;
+int val;
+
 printf("enter number:");
 scanf("%d",&num);
-while(b=0){
-    b=num%10
-    num=num/10;
-    printf("%d",b);
-}
+while(num>0){
+        val=num%10;
+        printf("%d",val);
+        num=num/10;
 
+}
     return 0;
 }
-
