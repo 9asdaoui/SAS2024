@@ -15,8 +15,8 @@ int main () {
                     c=a[j];
 
         }
-printf("%0.2f",b);
-printf("%0.2f",c);
+printf("max is :%0.2f\n",b);
+printf("min is :%0.2f",c);
 return 0;
 }
 
