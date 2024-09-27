@@ -9,6 +9,7 @@ int main(){
 
     printf("enter the number of the elements : ");
     scanf("%d",&nume);
+
     int A[nume];
 
     int i;
@@ -17,11 +18,22 @@ int main(){
             scanf("%d",&A[i]);
     }
     for (int e=0;e<nume ;e++){
-        printf("element %d is %d\n",e+1,A[e]);
+        for (int j=0; j<nume+1;j++){
+            if (A[j]>A[j+1]){
+               int n=A[j];
+               A[j]=A[j+1];
+               A[j+1]=n;
+
+            }
+        }
+    }
+    for (int u=0; u<nume ;u++){
+        printf("%d ",A[u]);
+    }
+
+    return 0 ;
+
     }
 
 
-
-return 0;
-}
 

@@ -4,8 +4,7 @@ int main(){
 
 
     int nume,numbers;
-
-
+    int sum=0;
 
     printf("enter the number of the elements : ");
     scanf("%d",&nume);
@@ -17,11 +16,10 @@ int main(){
             scanf("%d",&A[i]);
     }
     for (int e=0;e<nume ;e++){
-        printf("element %d is %d\n",e+1,A[e]);
+            sum=sum+A[e];
     }
-
+printf("the sum of the element is : %d ",sum);
 
 
 return 0;
 }
-

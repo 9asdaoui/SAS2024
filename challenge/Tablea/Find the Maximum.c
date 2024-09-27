@@ -4,8 +4,7 @@ int main(){
 
 
     int nume,numbers;
-
-
+    int j;
 
     printf("enter the number of the elements : ");
     scanf("%d",&nume);
@@ -16,10 +15,16 @@ int main(){
             printf(" enter number %d : ",i+1);
             scanf("%d",&A[i]);
     }
-    for (int e=0;e<nume ;e++){
-        printf("element %d is %d\n",e+1,A[e]);
-    }
+    j=A[0];
 
+    for (int e=0;e<nume ;e++){
+
+           if(A[e]>j){
+                j=A[e];
+           }
+
+    }
+printf("the lagest elements is : %d ",j);
 
 
 return 0;

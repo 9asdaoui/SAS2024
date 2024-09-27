@@ -3,12 +3,14 @@
 int main(){
 
 
-    int nume,numbers;
+    int nume,numbers,fact;
 
 
 
     printf("enter the number of the elements : ");
     scanf("%d",&nume);
+    printf("enter the facture : ");
+    scanf("%d",&fact);
     int A[nume];
 
     int i;
@@ -17,11 +19,12 @@ int main(){
             scanf("%d",&A[i]);
     }
     for (int e=0;e<nume ;e++){
-        printf("element %d is %d\n",e+1,A[e]);
+        printf(" %d",A[e]*fact);
     }
 
 
 
 return 0;
 }
+
 
