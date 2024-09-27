@@ -8,10 +8,12 @@ int main () {
         printf("enter number %d : ",i+1);
         scanf("%f",&a[i]);
     }
+    c=a[0];
+    b=a[0];
     for (int j=0;j<5;j++){
-            if (a[j]>a[j+1])
+            if (a[j]>b)
                     b=a[j];
-            if (a[j]<a[j+1])
+            if (a[j]<c)
                     c=a[j];
 
         }
