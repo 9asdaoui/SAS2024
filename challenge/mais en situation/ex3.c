@@ -8,12 +8,12 @@ int main () {
             if (n%i==0)
             b=0;
             if (n%i!=0)
-            b!=0;
+            b=1;
       }
 if (b=0){
     printf("this number is not a premiem");
 }
-            if (b!=0){
+            if (b=1){
             printf(" this number is premiem");
             }
 
