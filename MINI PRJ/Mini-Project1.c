@@ -89,7 +89,7 @@ break;
 
 case 3:
    printf("enter the name of the  book to check if  available");
-    char check_book[1][];
+    char check_book[1];
    scanf("%c",&check_book);
      for (int j=0; j<size; j++){
         if (book_name[j]==check_book[1]){
@@ -104,23 +104,23 @@ break;
 
 //4.this statement is for update th book-quantity
 
-case 4;
+case 4:
 //same here check for string
-   printf(" enter  the  name of the  book you want  to update his  quantity")
+   printf(" enter  the  name of the  book you want  to update his  quantity");
    char new_nameq[1];
    scanf("%c",&new_nameq[1]);
 
-   printf("enter the new quantity")
+   printf("enter the new quantity");
    int new_qua;
    scanf("%d",&new_qua);
 
    for(int e=0; e<size; e++){
          if(book_name[e]==new_nameq[1]){
-               book_quantity[e]=new_qua[1];
+                strcpy(book_quantity[size],new_qua);
                printf("done.");
          }
-         if(book_name[e]!=new_quantity[1])
-               printf("this  book is not exist in  the stock ")
+         if(book_name[e]!=new_nameq[1])
+               printf("this  book is not exist in  the stock ");
    }
 break;
 
@@ -128,16 +128,17 @@ break;
 
 case 5:
 
-  printf("  enter  the  name of the book  you  want  to delete  :"):
-  char del_book[1][];
-  scanf("%d",&del_book)
+  printf("  enter  the  name of the book  you  want  to delete  :");
+  char del_book[1][20];
+  scanf("%s",&del_book);
+
 for(int o=0;o<size;o++){
     if(book_name[o]==del_book[1]){
-       for(int j=0;j<size;j++){
-          book_name[j+1]=book_name[j]
-          book_price[j+1]=book_price[j]
-          book_author[j+1]=book_author[j]
-          book_quantity[j+1]=book_quantity[j]
+       for(int j=o;j<size;j++){
+            strcpy(book_name[j+1],book_name[j]);
+        strcpy(book_price[j+1],book_price[j]);
+        strcpy(book_author[j+1],book_author[j]);
+        strcpy(book_quantity[j+1],book_quantity[j]);
        }
 }
 }
