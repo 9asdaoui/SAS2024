@@ -9,4 +9,3 @@ void fac(int a){
     printf("%d",a);
 
 }
-
