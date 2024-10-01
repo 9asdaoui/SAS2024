@@ -15,13 +15,17 @@ int main() {
 
 
     while (choice != 6) {
-    printf("1. Add a Contact.\n");
-    printf("2. Edit a Contact.\n");
-    printf("3. Delete a Contact.\n");
-    printf("4. Show All Contacts.\n");
-    printf("5. Search for a Contact.\n");
-    printf("6.Exit the programme.\n");
+    printf("\n                      1. Add a Contact.\n");
+    printf("\n                      2. Edit a Contact.\n");
+    printf("\n                      3. Delete a Contact.\n");
+    printf("\n                      4. Show All Contacts.\n");
+    printf("\n                      5. Search for a Contact.\n");
+    printf("\n                      6.Exit the programme.\n  \n        enter here : ");
+
+
         scanf("%d", &choice);
+        getchar();
+
 
 struct mycontact s1;
 
@@ -30,9 +34,9 @@ switch (choice) {
     if (size < max_contacts) {
 
         char new_contact[20];
-        printf("Enter the new contact name: ");
-        scanf("%s", new_contact);
-
+        printf("Enter the new contact name : ");
+        scanf("%[^\n]", new_contact);
+     getchar();
         int found = 0;
             for (int i = 0; i < size; i++) {
                 if (strcmp(s1.name[i], new_contact) == 0) {
@@ -58,8 +62,9 @@ switch (choice) {
     case 2: {
 
         char namedit[20];
-        printf(" enter the contact name you want to edit");
-        scanf("%d",namedit);
+        printf(" enter the contact name you want to edit : ");
+        scanf("%[^\n]",namedit);
+        getchar();
     int found=0;
         for (int e = 0; e < size; e++) {
         if (strcmp(s1.name[e],namedit) == 0) {
@@ -74,7 +79,7 @@ switch (choice) {
                 break;
         }}
          if (found!=1) {
-        printf("This contact does not exist in the stock.\n");
+        printf("This contact does not exist.\n");
 }}
     break;
 
@@ -83,8 +88,8 @@ case 3: {
 
     char del_contact[20];
     printf("Enter the name of the contact you want to delete: ");
-    scanf("%s", del_contact);
-
+    scanf("%[^\n]", del_contact);
+   getchar();
 int found = 0;
     for (int o = 0; o < size; o++) {
             if (strcmp(s1.name[o], del_contact) == 0) {
@@ -128,9 +133,9 @@ if (size == 0) {
 case 5:{
 
         char check_contact[20];
-        printf("Enter the name of the contact to check if available: ");
-        scanf("%s",check_contact);
-
+        printf("Enter the name of the contact : ");
+        scanf("%[^\n]",check_contact);
+     getchar();
     int found=0;
         for (int j=0;j<size;j++) {
         if (strcmp(s1.name[j], check_contact) == 0) {
@@ -147,7 +152,10 @@ case 5:{
 }
 
 }break;
+case 6:{
 
+    printf("good beyy :)");
+}break;
 default:
     printf("this option is not exist");
 };
