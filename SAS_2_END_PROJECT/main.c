@@ -143,10 +143,9 @@ case 1:{
         scanf("%s", new_name);
         int found = 0;
             for (int i = 0; i < size; i++) {
-                if (strcmp(resevation.name[i], new_name) == 0) {
+                if (strcasecmp(resevation.name[i], new_name) == 0) {
                 printf("This patients already exists.\n");
                 found = 1;
-        break;
     }
     }
 
@@ -242,7 +241,7 @@ int found = 0;
         if (found!=1) {
                 printf("This contact is not exist.\n");
 }
-size--;
+
     }
 
 
@@ -281,9 +280,9 @@ case 4:{
 if(c==1){
 
 
-    for (int i =0; i<size ; i++) {
+    for (int i =0; i<size-1 ; i++) {
     for (int j =0; j<size-i-1; j++) {
-            if (strcmp(resevation.name[j], resevation.name[j + 1]) > 0) {
+            if (strcasecmp(resevation.name[j], resevation.name[j + 1]) > 0) {
 
                 char temp_status[30];
                 strcpy(temp_status, resevation.status[j]);
@@ -340,9 +339,9 @@ if(c==1){
             printf("resevation date  : %s \n",resevation.date[u]);
 }}
 if(c==2){
-        for (int i =0; i<size ; i++) {
+        for (int i =0; i<size-1 ; i++) {
         for (int j =0; j<size-i-1; j++) {
-                if (strcmp(resevation.status[j], resevation.status[j + 1])>0) {
+                if (strcasecmp(resevation.status[j], resevation.status[j + 1])>0) {
 
                 char temp_status[30];
                 strcpy(temp_status, resevation.status[j]);
@@ -418,7 +417,7 @@ case 5:{
             printf("name is : %s \n",resevation.name[u]);
             printf("first name is : %s \n",resevation.first_name[u]);
             printf("phone number  : %s \n",resevation.phone[u]);
-            printf("age  : %s \n",resevation.age[u]);
+            printf("age  : %d \n",&resevation.age[u]);
             printf("status : %s \n",resevation.status[u]);
             printf("resevation date  : %s \n",resevation.date[u]);
 }
@@ -429,13 +428,13 @@ case 5:{
 printf("Enter the name : ");
 scanf("%s",s_name);
         for( int u=0;u<size;u++){
-    if (strcmp(resevation.id[u],s_name) == 0){
+    if (strcasecmp(resevation.id[u],s_name) == 0){
 
             printf("  ID : %s \n",resevation.id[u]);
             printf("name is : %s \n",resevation.name[u]);
             printf("first name is : %s \n",resevation.first_name[u]);
             printf("phone number  : %s \n",resevation.phone[u]);
-            printf("age  : %s \n",resevation.age[u]);
+            printf("age  : %d \n",&resevation.age[u]);
             printf("status : %s \n",resevation.status[u]);
             printf("resevation date  : %s \n",resevation.date[u]);
 }
@@ -519,4 +518,4 @@ default:{
     }
     return 0;
     }
-// comment
+
